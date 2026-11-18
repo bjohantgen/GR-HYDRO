@@ -3,7 +3,7 @@ This file contains the initial conditions of many hydrodynamic test
 problems
 
 Author: Brayden JoHantgen
-Last Update: 11/13/26
+Last Update: 11/17/26
 */
 
 //////////////
@@ -52,12 +52,12 @@ pub fn hard_shock() -> simulation::InitConds {
 pub fn bondi_accretion_state_5() -> simulation::InitConds {
     let bondi = simulation::InitConds{
         adiabatic_index: 5.0 / 3.0,
-        discontinuity: 0.0,
+        discontinuity: 0.5,
         bh_mass: 1.0,
         softness: 2.0,
         length: 16.0,
-        p: (3.0 / 5.0, 0.0),
-        rho: (1.0, 0.0),
+        p: (3.0 / 5.0, 3.0 / 5.0),
+        rho: (1.0, 1.0),
         v1: (0.0, 0.0), 
         v2: (0.0, 0.0),
         v3: (0.0, 0.0),
